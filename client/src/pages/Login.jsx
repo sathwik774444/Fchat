@@ -69,6 +69,8 @@ export default function Login() {
 
           <button
             disabled={busy}
+            name="button"
+            id="button"
             className="w-full rounded-lg bg-brand-500 text-white py-2 text-sm font-medium hover:bg-brand-600 disabled:opacity-50"
           >
             {busy ? "Signing in..." : "Login"}
