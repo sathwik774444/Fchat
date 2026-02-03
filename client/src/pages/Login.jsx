@@ -43,6 +43,8 @@ export default function Login() {
             <label className="block text-xs font-medium text-gray-700 mb-1">Email</label>
             <input
               value={email}
+              name="email"
+              id="email"
               onChange={(e) => setEmail(e.target.value)}
               type="email"
               className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-200"
@@ -55,6 +57,8 @@ export default function Login() {
             <label className="block text-xs font-medium text-gray-700 mb-1">Password</label>
             <input
               value={password}
+              name="password"
+              id="password"
               onChange={(e) => setPassword(e.target.value)}
               type="password"
               className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-200"
