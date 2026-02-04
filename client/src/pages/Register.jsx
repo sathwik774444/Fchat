@@ -19,7 +19,7 @@ export default function Register() {
     setError("");
     setBusy(true);
     try {
-      await register({ name, email, password, avatar });
+      await register({ name, email, password});
       navigate("/dashboard");
     } catch (err) {
       setError(err?.response?.data?.message || "Registration failed");
@@ -77,7 +77,7 @@ export default function Register() {
             />
           </div>
 
-          <div>
+          {/* <div>
             <label className="block text-xs font-medium text-gray-700 mb-1">Avatar URL (optional)</label>
             <input
               value={avatar}
@@ -86,7 +86,7 @@ export default function Register() {
               className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-200"
               placeholder="https://..."
             />
-          </div>
+          </div> */}
 
           <button
             disabled={busy}

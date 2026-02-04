@@ -12,7 +12,7 @@ export default function Dashboard() {
   const { user: me, token, logout } = useAuth();
 
   const SOCKET_URL = useMemo(
-    () => import.meta.env.VITE_SOCKET_URL || "http://localhost:5000",
+    () => import.meta.env.VITE_SOCKET_URL || "http://localhost:5001",
     []
   );
 

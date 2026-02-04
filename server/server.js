@@ -63,6 +63,7 @@ async function start() {
   }
 
   await mongoose.connect(process.env.MONGO_URI);
+  console.log('Mongodb is connected');
 
   server.listen(PORT, () => {
     // eslint-disable-next-line no-console

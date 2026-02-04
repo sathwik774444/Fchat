@@ -2,8 +2,9 @@ import User from "../models/User.js";
 import { generateToken } from "../utils/generateToken.js";
 
 export async function register(req, res, next) {
+  // console.log(req.body);
   try {
-    const { name, email, password, avatar } = req.body;
+    const { name, email, password } = req.body;
 
     if (!name || !email || !password) {
       return res.status(400).json({ message: "Missing required fields" });
@@ -18,7 +19,7 @@ export async function register(req, res, next) {
       name,
       email: email.toLowerCase(),
       password,
-      avatar: avatar || "",
+      // avatar: avatar || "",
     });
 
     return res.status(201).json({
@@ -26,7 +27,7 @@ export async function register(req, res, next) {
         _id: user._id,
         name: user.name,
         email: user.email,
-        avatar: user.avatar,
+        // avatar: user.avatar,
         isOnline: user.isOnline,
       },
       token: generateToken(user._id),
@@ -59,7 +60,7 @@ export async function login(req, res, next) {
         _id: user._id,
         name: user.name,
         email: user.email,
-        avatar: user.avatar,
+        // avatar: user.avatar,
         isOnline: user.isOnline,
       },
       token: generateToken(user._id),
